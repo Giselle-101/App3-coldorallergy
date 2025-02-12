@@ -49,7 +49,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+    function showResults() {
+      var total = cold_count + allergy_count;
+      var cold_percentage = (cold_count / total) * 100;
+      var allergy_percentage = (allergy_count / total) * 100;
 
+      document.getElementById("results").innerHTML = `
+        <h2>Results</h2>
+        <p>You have:</p>
+        <p><strong>Cold:</strong> ${cold_percentage.toFixed(2)}%</p>
+        <p><strong>Allergies:</strong> ${allergy_percentage.toFixed(2)}%</p>
+      `;
+    }
   </script>
 
 
