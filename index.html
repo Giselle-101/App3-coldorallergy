@@ -7,8 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Olivia Lopez
- 
+Giselle Marroquin 
 Further Information:
 http://cns.utexas.edu/fri
  
@@ -20,8 +19,7 @@ Brief Description of Goal of Code:
 The goal of this code is to create an online test that can distinguish between a cold and allergies based off symptoms.
  
 Known Issues:
-In a state of confusion, I did a large portion of my code without committing changes per every change. As I was troubleshooting, I began making much more specific changes. I okayed this with Dr. Riedel.
-Furthermore, right before submitting, my code started appearing in the test//
+I could not make the results button properly.
 	
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -140,7 +138,6 @@ the section below tells us that page is visible if shifted to left-->
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	
-<!--The following code marks off the first page and gives it a header. The code above tells us that there is a division in the pages- each div has to have a pair in order to run properly-->
 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -148,7 +145,7 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 
     	<div id="content1" class="w3-container">
-        <p>Are your eyes watery or itchy?.</p>  
+        <p>Are your eyes watery or itchy?</p>  
 	</div>
 <!--this code moves the taker to the next question on page two if they click yes-->
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
@@ -157,22 +154,19 @@ the section below tells us that page is visible if shifted to left-->
     </div>
 </div>
 	
-<!--the same code above is repeated for the following 4 questions-->	
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 	<h1>Question 2</h1>
 	</div>
 	
 	<div id="content2" class="w3-container">
-		<p>Do you have a fever?.</p>  
+		<p>Do you have a fever?</p>  
 	</div>			
 		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>	
 
 </div>
-
-<!--this code follows the same procedure as question 1, but it directs to the third page instead-->
 	
 <div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -180,7 +174,7 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 	
     	<div id="content3" class="w3-container">
-        <p>Do you have a sore throat?.</p> 
+        <p>Do you have a sore throat?</p> 
 	</div>	
 	
 		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
@@ -188,15 +182,13 @@ the section below tells us that page is visible if shifted to left-->
     	</div>
 </div>
 	
-<!--this code follows the same procedure as question 1, but it directs to the fouth page instead-->
-
 <div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
 	
     	<div id="content4" class="w3-container">
-        	<p>Are your symptoms seasonal or chronic?.</p>
+        	<p>Are your symptoms seasonal or chronic?</p>
 	</div>
 		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
@@ -204,21 +196,17 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 </div>
 
-<!--this code follows the same procedure as question 1, but it directs to the fifth page instead-->
-
 <div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 5</h1>
 	</div>
 	
     	<div id="content5" class="w3-container">
-        	<p>Is your mucus discolored?.</p>
+        	<p>Is your mucus discolored?</p>
 	</div>
 		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
 </div>
-
-<!--this code follows the same procedure a question 1, but it directs to the sixth page-->
 	
 <div class="page" id="six">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -226,36 +214,33 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 	
     	<div id="content5" class="w3-container">
-        	<p>Do you have body aches?.</p>
+        	<p>Do you have body aches?</p>
 	</div>
 		<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>	
 </div>
 
 </div>
-	
-<!--this code follows the same procedure as question 1, but it directs to the results page instead-->
-	
+		
 <div class="page" id="results">
 	<div id="header" class="w3-container w3-flat-carrot">		
 		<h1>Results</h1>
 </div>
 	<div id= "content" class="w3 container">
-		<p>Click the button below to discover your fate!</p>
+		<p>Click the button below to discover your disease</p>
 		<a href="#results" class="w3-btn w3-black" onclick= "getResult();">See Results</button>	
 	</div>
 
-<!--this code uses the answers to compute results and displays them upon a click-->
 	
 <div id="resultContainer" class="w3 container">
 	<button onclick="getResult();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b></button>
 	<p id="resultText"></p>
-<!--this code uses the code established earlier to reset the test to page 1-->
+
 	<button onclick="restartTest();" class="w3-button w3-white w3-round w3-hover-red"><b>Restart Test</b></button>
 
 	</div>
 </div>
-<!--this code adds a footer to the page in the same format as the header-->
+
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
