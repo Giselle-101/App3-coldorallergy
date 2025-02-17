@@ -124,7 +124,7 @@ function restartTest() {
 <!--I couldn't write the comments within, so the code section above sets the page to take full screen, fixes it in place, and allows scrolling
 the section below tells us that page is visible if shifted to left-->
 	
-<!--this code sets the first page of the exam with a color and name-->
+<!--this code sets the first page of the test with a color and name-->
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
 </div>
@@ -147,13 +147,15 @@ the section below tells us that page is visible if shifted to left-->
     	<div id="content1" class="w3-container">
         <p>Are your eyes watery or itchy?</p>  
 	</div>
-<!--this code moves the taker to the next question on page two if they click yes-->
+<!--this code runs the allergy add moves the taker to the next question on page two if they click yes-->
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
 <!--this code runs the cold add and moves to page two if they click no-->
 <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
     </div>
 </div>
+<!--Code is closed-->
 	
+<!--this code is question number 2 and opens a new page-->
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 	<h1>Question 2</h1>
@@ -162,12 +164,16 @@ the section below tells us that page is visible if shifted to left-->
 	<div id="content2" class="w3-container">
 		<p>Do you have a fever?</p>  
 	</div>			
+<!--this code runs the allergy add moves the taker to the next question on page two if they click yes-->
 		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+<!--this code runs the cold add and moves to page two if they click no-->
          	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>	
 
 </div>
-	
+<!--Code is closed-->
+
+<!--this code is question number 3 and opens a new page-->	
 <div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -176,12 +182,15 @@ the section below tells us that page is visible if shifted to left-->
     	<div id="content3" class="w3-container">
         <p>Do you have a sore throat?</p> 
 	</div>	
-	
+<!--this code runs the allergy add moves the taker to the next question on page two if they click yes-->
 		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+<!--this code runs the cold add and moves to page two if they click no-->
          	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
     	</div>
 </div>
-	
+<!--Code is closed-->
+
+<!--this code is question number 4 and opens a new page-->	
 <div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
@@ -190,12 +199,16 @@ the section below tells us that page is visible if shifted to left-->
     	<div id="content4" class="w3-container">
         	<p>Are your symptoms seasonal or chronic?</p>
 	</div>
+<!--this code runs the allergy add moves the taker to the next question on page two if they click yes-->
 		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+<!--this code runs the cold add and moves to page two if they click no-->
          	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
     	
 	</div>
 </div>
+<!--Code is closed-->
 
+<!--this code is question number 5 and opens a new page-->	
 <div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 5</h1>
@@ -204,10 +217,14 @@ the section below tells us that page is visible if shifted to left-->
     	<div id="content5" class="w3-container">
         	<p>Is your mucus discolored?</p>
 	</div>
+<!--this code runs the allergy add moves the taker to the next question on page two if they click yes-->
 		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+<!--this code runs the cold add and moves to page two if they click no-->
          	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
 </div>
-	
+<!--Code is closed-->
+
+<!--this code is question number 6 and opens a new page-->	
 <div class="page" id="six">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 6</h1>
@@ -216,12 +233,17 @@ the section below tells us that page is visible if shifted to left-->
     	<div id="content5" class="w3-container">
         	<p>Do you have body aches?</p>
 	</div>
+<!--this code runs the allergy add moves the taker to the next question on page two if they click yes-->
 		<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>	
+<!--this code runs the allergy add moves the taker to the next question on page two if they click no-->
+         	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+
 </div>
 
 </div>
-		
+<!--Code is closed-->
+
+<!--this code is results page and calculates results-->	
 <div class="page" id="results">
 	<div id="header" class="w3-container w3-flat-carrot">		
 		<h1>Results</h1>
