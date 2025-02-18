@@ -198,7 +198,7 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 	
     	<div id="content4" class="w3-container">
-        	<p>Are your symptoms seasonal or chronic?</p>
+        	<p>Are your symptoms seasonal?</p>
 	</div>
 <!--this code runs the allergy add moves the taker to the next question on page two if they click yes-->
 		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
@@ -216,58 +216,51 @@ the section below tells us that page is visible if shifted to left-->
 	</div>
 	
     	<div id="content5" class="w3-container">
-        	<p>Do you have any body aches?</p>
+        	<p>Are your symptoms triggered by exposure to things like pollen or dust?</p>
 	</div>
-<!--this code runs the cold add andmoves the taker to the next question on page two if they click yes-->
-		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-<!--this code runs the allergy add and moves the taker to the next question on page two if they click no-->
-         	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
-	</div>
+		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
 </div>
-<!--Code is closed-->
 
-<!--this code is question number 6 and opens a new page-->	
+<!--this code follows the same procedure a question 1, but it directs to the sixth page-->
+	
 <div class="page" id="six">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 6</h1>
 	</div>
 	
-    	<div id="content6" class="w3-container">
-        	<p>Are your symptoms triggered by exposure to things like pollen or dust?</p>
+    	<div id="content5" class="w3-container">
+        	<p>Do you have body aches?</p>
 	</div>
-<!--this code runs the allergy add moves the taker to the next question on page two if they click yes-->
-		<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-<!--this code runs the cold add and moves to page two if they click no-->
-         	<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-
+		<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>	
 </div>
-
 </div>
-<!--Code is closed-->
-
-<!--this code is results page and calculates results-->	
+	
+<!--this code leads to the results page-->
+	
 <div class="page" id="results">
 	<div id="header" class="w3-container w3-flat-carrot">		
 		<h1>Results</h1>
 </div>
 	<div id= "content" class="w3 container">
-		<p>Click the button below to discover your fate!</p>
+		<p>Click the button below to "diagnose!"</p>
 		<a href="#results" class="w3-btn w3-black" onclick= "getResult();">See Results</button>	
 	</div>
 
-<!--this code calculates the results with the click of a button-->
+<!--this code uses the answers to calculate the results with a click-->
 	
 <div id="resultContainer" class="w3 container">
 	<button onclick="getResult();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b></button>
 	<p id="resultText"></p>
-<!--this code resets the test and goes page 1-->
+<!--this code uses the code established earlier to reset the test to page 1-->
 	<button onclick="restartTest();" class="w3-button w3-white w3-round w3-hover-red"><b>Restart Test</b></button>
 
 	</div>
 </div>
-<!--this code adds a footer-->
+<!--this code adds a footer to the page in the same format as the header-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<p>DIY</p>
 </footer>
 		
 </body>
